@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+currently running on therappy.rutgers.edu
 
-## Available Scripts
+Entire Project file base is in notiftesting/onesignal_push folder.
 
-In the project directory, you can run:
+CREATING A TEST MESSAGE -first go to therappy.rutgers.edu on whatever you'd prefer to get the message on (either phone or laptop)
+	-hit "allow notifications" when prompted
+	-go to app.onesignal.com
+	- click "therAPPy Custom" > "audience" on top" > "all users" right below "audience"
+	-this should be showing you 3 users: the 2 from 3/28 are my phone (10:39 pm) and laptop (7:39 pm)
+	-hopefully a 3rd one should be showing from today, that would be YOU
+		-if not, try logging in via an incognito window AND DO NOT CLOSE THE WINDOW AFTER ALLOWING NOTIFS
+		-then refresh the "all users" page, retry until you get a userfrom 3/29
+	-click "options" on the left for your profile, then "add to test users," give urself a nickname
+		-for example mine are "sss mobile" and "sss laptop"
+	-verify that you're a test user now by hitting the "test users" button (underneath "audience" and next to "all users")
 
-### `npm start`
+"How can I view the code?"
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-ok. so currently the code I copy/pasted from OneSignal is located... 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1) in the header file of the wordpress blog (that's what calls OneSignal to start up when you visit the therappy.rutgers.edu) 
+2) in the root directory of www/wordpress/therappy on the coewww server (that's where i copy/pasted SDK files from OneSignal)
 
-### `npm test`
+I'll go over the cases for viewing the code for both cases 1 and 2:
+1) WORDPRESS HEADER 
+	-go to therappy.rutgers.edu/wp-login to log in as a developer 
+		-contact me for user/password info -now that ur logged in, you should be redirected to therappy.rutgers.edu/wp-admin 
+	-mouse over "appearance" on the left, then click "theme editor" from the menu that pops out 
+	-on the right side where it says "Theme Files," scroll down until you see "Theme Footer" (footer.php) and click 
+	-I pasted the code in lines 23 to 31.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+2) root directory of www/wordpress/therappy
+-if you just wanna see the SDK files that i copy/pasted, you can download them directly from onesignal
+	-log into app.onesignal.com
+	-hit "settings" on top bar, then the "All Browsers (except Safari)" button
+	-scroll all the way down and hit "save"
+	-the next page gives you a button to "Download SDK Files". That's the code.
